@@ -676,7 +676,9 @@
       .tentang-grid   { grid-template-columns: 1fr; gap: 32px; }
       .principal-card { flex-direction: column; text-align: center; padding: 28px 20px; }
       .principal-info blockquote { text-align: left; }
-      .stats-grid     { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid     { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .stat-card      { padding: 24px 14px; }
+      .stat-number    { font-size: 2.4rem; }
       .accreditation-badge { padding: 20px 28px; }
     }
 
@@ -782,8 +784,14 @@
     }
 
     @media (max-width: 767px) {
-      .programs-grid   { grid-template-columns: 1fr 1fr; }
-      .facilities-grid { grid-template-columns: 1fr 1fr; }
+      .programs-grid      { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .program-card       { padding: 20px 14px; }
+      .facilities-grid    { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .facility-item img  { height: 150px; }
+    }
+    @media (max-width: 420px) {
+      .programs-grid   { grid-template-columns: 1fr; }
+      .facilities-grid { grid-template-columns: 1fr; }
     }
     @media (min-width: 768px) and (max-width: 1023px) {
       .programs-grid   { grid-template-columns: repeat(2, 1fr); }
@@ -1061,8 +1069,15 @@
     }
 
     @media (max-width: 767px) {
-      .teachers-grid { grid-template-columns: repeat(2, 1fr); }
-      .flip-card     { height: 280px; }
+      .teachers-grid  { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .flip-card      { height: 210px; }
+      .flip-card-front,
+      .flip-card-back { padding: 16px 12px; }
+      .teacher-photo  { width: 64px; height: 64px; margin-bottom: 10px; }
+      .teacher-name   { font-size: 0.88rem; margin-bottom: 6px; }
+      .teacher-back-icon { font-size: 1.5rem; margin-bottom: 8px; }
+      .teacher-back-name { font-size: 0.88rem; margin-bottom: 6px; }
+      .teacher-back-quote { font-size: 0.78rem; }
     }
     @media (min-width: 768px) and (max-width: 1023px) {
       .teachers-grid { grid-template-columns: repeat(2, 1fr); }
